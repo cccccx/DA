@@ -28,13 +28,13 @@ for j in range (3,138):
   for i in range (0,len(df1)):
   
     sum_x = sum_x +(int(df1[i][j]))
-    #print sum_x
+    
   if sum_x == 0:
     print j
     del_col.append(j)
 
   sum_x =0
-    #data_arr.remove(i)
+   
 x=0
 y=0
 del_col.reverse();
@@ -45,7 +45,7 @@ for x in range(0,len(df1)):
 
 for y in del_col:
     del headers[y]
-    df_file = file('r2.csv','wb')
+df_file = file('r2.csv','wb')
 writer = csv.writer(df_file)
 writer.writerow(headers)
 for item in df1:
